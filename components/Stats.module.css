@@ -1,0 +1,33 @@
+.stats {
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+  padding: 48px 0;
+  background: var(--navy-section);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.item {
+  text-align: center;
+}
+
+.value {
+  font-size: 2.6rem;
+  color: var(--gold);
+}
+
+.label {
+  font-size: 0.85rem;
+  color: var(--slate);
+  margin-top: 4px;
+}

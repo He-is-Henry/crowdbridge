@@ -1,0 +1,41 @@
+.about {
+  padding: 100px 0;
+}
+
+.heading {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  color: var(--off-white);
+  margin: 16px 0 56px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  background: var(--navy-section);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 8px;
+  padding: 32px 28px;
+}
+
+.cardTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.cardDesc {
+  color: var(--slate);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}

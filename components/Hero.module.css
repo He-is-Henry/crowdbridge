@@ -1,0 +1,188 @@
+.hero {
+  position: relative;
+  padding: 64px 0 80px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse at top right,
+      rgba(212, 175, 55, 0.08),
+      transparent 50%
+    ),
+    var(--navy-deep);
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+  padding: 14px 0;
+  margin-bottom: 56px;
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.marqueeTrack {
+  display: flex;
+  width: max-content;
+  gap: 40px;
+  animation: scrollMarquee 28s linear infinite;
+}
+
+@keyframes scrollMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marqueeItem {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  color: var(--slate);
+  opacity: 0.5;
+  white-space: nowrap;
+}
+
+.marqueeItem::after {
+  content: "•";
+  margin-left: 40px;
+  color: var(--gold);
+  opacity: 0.6;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeUp1,
+.fadeUp2,
+.fadeUp3,
+.fadeUp4 {
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.fadeUp1 {
+  animation-delay: 0.05s;
+}
+.fadeUp2 {
+  animation-delay: 0.15s;
+}
+.fadeUp3 {
+  animation-delay: 0.3s;
+}
+.fadeUp4 {
+  animation-delay: 0.45s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marqueeTrack {
+    animation: none;
+  }
+  .fadeUp1,
+  .fadeUp2,
+  .fadeUp3,
+  .fadeUp4 {
+    opacity: 1;
+    animation: none;
+    transform: none;
+  }
+}
+
+.inner {
+  max-width: 760px;
+}
+
+.headline {
+  font-size: clamp(3.2rem, 9vw, 6rem);
+  color: var(--off-white);
+  margin: 16px 0 32px;
+}
+
+.bridgeWrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+.bridgeLineAnim {
+  height: 2px;
+  flex: 1;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: drawLine 0.9s ease forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes drawLine {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.subtext {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--slate);
+  max-width: 540px;
+  margin-bottom: 40px;
+}
+
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.primaryCta {
+  background: var(--gold);
+  color: var(--navy-deep);
+  font-weight: 700;
+  padding: 16px 28px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
+}
+
+.primaryCta:hover {
+  background: var(--gold-bright);
+}
+
+.secondaryCta {
+  border: 1px solid rgba(245, 243, 238, 0.25);
+  color: var(--off-white);
+  padding: 16px 28px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: border-color 0.2s ease;
+}
+
+.secondaryCta:hover {
+  border-color: var(--gold);
+}

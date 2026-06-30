@@ -1,0 +1,168 @@
+.contact {
+  padding: 100px 0;
+}
+
+.heading {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  color: var(--off-white);
+  margin: 16px 0 56px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+
+@media (min-width: 768px) {
+  .layout {
+    grid-template-columns: 1.4fr 1fr;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--slate);
+}
+
+.field input,
+.field textarea {
+  background: var(--navy-section);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 4px;
+  padding: 12px 14px;
+  color: var(--off-white);
+  font-family: inherit;
+  font-size: 0.95rem;
+  resize: vertical;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--gold);
+  outline: none;
+}
+
+.submit {
+  background: var(--gold);
+  color: var(--navy-deep);
+  font-weight: 700;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  align-self: flex-start;
+  transition: background 0.2s ease;
+}
+
+.submit:hover:not(:disabled) {
+  background: var(--gold-bright);
+}
+
+.submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.direct {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-self: flex-start;
+  background: var(--navy-section);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 8px;
+  padding: 28px;
+}
+
+.directLabel {
+  font-size: 0.9rem;
+  color: var(--slate);
+  margin-bottom: 4px;
+}
+
+.whatsapp,
+.call {
+  display: block;
+  text-align: center;
+  padding: 14px 20px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: opacity 0.2s ease;
+}
+
+.whatsapp {
+  background: var(--gold);
+  color: var(--navy-deep);
+}
+
+.call {
+  border: 1px solid rgba(245, 243, 238, 0.25);
+  color: var(--off-white);
+}
+
+.whatsapp:hover,
+.call:hover {
+  opacity: 0.85;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 22, 40, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 24px;
+}
+
+.modal {
+  background: var(--navy-section);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 8px;
+  padding: 36px;
+  max-width: 380px;
+  width: 100%;
+  text-align: center;
+}
+
+.modalTitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.6rem;
+  color: var(--gold);
+  letter-spacing: 0.02em;
+  margin-bottom: 12px;
+}
+
+.modalBody {
+  color: var(--slate);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.modalClose {
+  background: var(--gold);
+  color: var(--navy-deep);
+  font-weight: 700;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}

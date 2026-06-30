@@ -1,0 +1,28 @@
+.footer {
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  padding: 40px 0;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.brand {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  color: var(--gold);
+}
+
+.meta {
+  font-size: 0.85rem;
+  color: var(--slate);
+}
+
+.copy {
+  font-size: 0.75rem;
+  color: var(--slate);
+  opacity: 0.7;
+  margin-top: 8px;
+}
