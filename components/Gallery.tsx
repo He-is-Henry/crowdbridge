@@ -61,8 +61,8 @@ export default function Gallery() {
   return (
     <section id="work" className={styles.gallery}>
       <div className="container">
-        <p className="eyebrow">Recent work</p>
-        <h2 className={`display ${styles.heading}`}>Campaigns we&apos;ve powered.</h2>
+        <p className="eyebrow">Our Impact</p>
+        <h2 className={`display ${styles.heading}`}>Events we&apos;ve served.</h2>
 
         <div className={styles.grid}>
           {work.map((item, i) => (
