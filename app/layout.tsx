@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: '/crowdbridge_logo.png'
+  },
+  verification: {
+    google: 'google-site-verification=P_kUw3BPa4KaM_vo7VByAi3iq4Mcyyf41_9MTIxn90Y',
   }
 };
 
