@@ -10,23 +10,36 @@ export default function Contact() {
   const [showSuccess, setShowSuccess] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  const [form, setForm] = useState({ name: '', email: '', message: '' });
+
+  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
+    setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
+  }
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setSubmitting(true);
 
-    const formData = new FormData(e.currentTarget);
-    const data = Object.fromEntries(formData.entries());
+    try {
+      const res = await fetch('https://formspree.io/f/xqevyqqy', {
+        method: 'POST',
+        body: JSON.stringify(form),
+        headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+      });
 
-    // Placeholder: logs the submission for now.
-    // Swap this with a real submit (e.g. to Formspree or an email API) later.
-    console.log('CrowdBridge contact form submission:', data);
-
-    setTimeout(() => {
+      if (res.ok) {
+        setShowSuccess(true);
+        setForm({ name: '', email: '', message: '' });
+      } else {
+        alert('Something went wrong. Please try WhatsApp instead.');
+      }
+    } catch {
+      alert('Something went wrong. Please try WhatsApp instead.');
+    } finally {
       setSubmitting(false);
-      setShowSuccess(true);
-      e.currentTarget.reset();
-    }, 600);
+    }
   }
+
 
   return (
     <section id="contact" className={styles.contact}>
@@ -57,15 +70,15 @@ export default function Contact() {
             <p className={styles.directLabel}>Or fill the form below</p>
             <div className={styles.field}>
               <label htmlFor="name">Name</label>
-              <input id="name" name="name" type="text" required />
+              <input id="name" name="name" type="text" value={form.name} onChange={handleChange} required />
             </div>
             <div className={styles.field}>
               <label htmlFor="email">Email</label>
-              <input id="email" name="email" type="email" required />
+              <input id="email" name="email" type="email" value={form.email} onChange={handleChange} required />
             </div>
             <div className={styles.field}>
               <label htmlFor="message">Tell us about your event</label>
-              <textarea id="message" name="message" rows={4} required />
+              <textarea id="message" name="message" rows={4} value={form.message} onChange={handleChange} required />
             </div>
             <button type="submit" className={styles.submit} disabled={submitting}>
               {submitting ? 'Sending…' : 'Send message'}
