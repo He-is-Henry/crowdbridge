@@ -19,9 +19,10 @@ export const metadata: Metadata = {
     type: 'website',
   },
   icons: {
-    icon: './crowdbridge_logo.png'
+    icon: '/crowdbridge_logo.png'
   }
 };
+
 
 export default function RootLayout({
   children,
