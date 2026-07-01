@@ -1,17 +1,22 @@
 import styles from './About.module.css';
 
 const services = [
+
   {
-    title: 'Student mobilization',
-    desc: 'Real students, on the ground, driving turnout across campuses.',
+    title: 'Audience Mobilization',
+    desc: "Coordinating and providing the required audience for events of every scale."
   },
   {
-    title: 'Campus publicity',
-    desc: 'Awareness campaigns built for how students actually communicate.',
+    title: 'Student Audience Mobilization',
+    desc: 'Mobilizing verified student attendees for campus and youth-focused events.',
   },
   {
-    title: 'Event promotion',
-    desc: 'From WhatsApp communities to flyers and campus ambassadors.',
+    title: 'Guest Attendance Fulfilment',
+    desc: 'Helping organizers meet their desired attendance goals with reliable audience coordination.',
+  },
+  {
+    title: 'Community Engagement Support',
+    desc: 'Connecting organizations with relevant communities for impactful participation',
   },
 ];
 
