@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Stats from '@/components/Stats';
+import AboutMe from '@/components/AboutMe';
 import About from '@/components/About';
 import Gallery from '@/components/Gallery';
 import Contact from '@/components/Contact';
@@ -13,6 +14,7 @@ export default function Home() {
       <main>
         <Hero />
         <Stats />
+        <AboutMe />
         <About />
         <Gallery />
         <Contact />
