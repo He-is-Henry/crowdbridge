@@ -43,6 +43,9 @@ export default function Hero() {
           <a href="#work" className={styles.secondaryCta}>
             See our work
           </a>
+          <a href="#about-me" className={styles.secondaryCta}>
+            About the founder
+          </a>
         </div>
       </div>
     </section>

@@ -14,8 +14,10 @@ export default function AboutMe() {
         <div className={styles.body}>
           <p className={styles.intro}>
             Hi, I&apos;m Arogbodo Motunrayo Olayimade, popularly known as Motun,
-            founder of CrowdBridge and a final-year Project Management student
-            graduating in 2027.
+            founder of CrowdBridge and a final-year Project Management Technology
+            student at the prestigious Lagos State University (LASU), with a
+            passion for delivering professional audience mobilization solutions
+            that contribute to successful events.
           </p>
           <p className={styles.text}>
             I help event organizers, brands, and agencies achieve their audience
