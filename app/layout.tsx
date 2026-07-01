@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://crowdbridge.vercel.app'),
   title: 'CrowdBridge | Student Mobilization & Campus Publicity by Arogbodo Motunrayo',
   description:
     'CrowdBridge connects brands and event organizers to real, engaged student audiences across Lagos campuses, from awareness to turnout. By Arogbodo Motunrayo.',
