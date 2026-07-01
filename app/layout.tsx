@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     icon: '/crowdbridge_logo.png'
   },
   verification: {
-    google: 'google-site-verification=P_kUw3BPa4KaM_vo7VByAi3iq4Mcyyf41_9MTIxn90Y',
+    google: "WURTrI0XzO1U-ikaS04EJoXWeCvvfMf5XkORW9EQ-J4"
   }
 };
 
